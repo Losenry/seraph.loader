@@ -4,9 +4,11 @@ local worldPlaceId = {
 }
 
 xpcall(function()
-    if worldPlaceId[worldPlaceId] then
+    if table.find(worldPlaceId, gameplaceId) then
         if _G.LocateAPILink ~= nil then
-            return loadstring(game:HttpGet(LocateAPILink .. 'localeGame/' .. tostring(gameplaceId) .. '.lua'))();
+            return loadstring(game:HttpGet(_G.LocateAPILink .. 'localeGame/' .. tostring(gameplaceId) .. '.lua'))();
+        else
+            warn('LocateAPILink is not defined')
         end
     else
         print('mismatch world place id, make sure to execute correctly')
