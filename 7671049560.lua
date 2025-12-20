@@ -3,15 +3,6 @@ local worldPlaceId = {
    76558904092080, 129009554587176
 }
 
-xpcall(function()
-    if table.find(worldPlaceId, gameplaceId) then
-        if _G.LocateAPILink ~= nil then
-            return loadstring(game:HttpGet(_G.LocateAPILink .. 'localeGame/' .. tostring(gameplaceId) .. '.lua'))();
-        else
-            warn('LocateAPILink is not defined')
-        end
-    else
-        print('mismatch world place id, make sure to execute correctly')
-        return ''
-    end
-end, warn)
+pcall(function()
+   loadstring(game:HttpGet(string.format('https://raw.githubusercontent.com/Losenry/seraph.loader/refs/heads/main/localeGame/%s.lua', tostring(gameplaceId))))();
+end)
