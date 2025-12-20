@@ -1,4 +1,4 @@
-for _, v in pairs(game:GetDescendants()) do
+for _, v in pairs(game:GetService('CoreGui'):GetChildren()) do
 	if v.Name:match('SERENITY') then
 		v:Destroy()
 	end
@@ -482,7 +482,7 @@ function b:Window(t)
 	end;
 	self.Settings.Transparency = an.Transparency;
 	self.Theme = an.Theme;
-	local ao = o:WaitForChild("PlayerGui", 1)
+	local ao = o:WaitForChild("CoreGui", 1)
 	local ap;
 	local aq = 0;
 	local ar = self:Create("ScreenGui", {
@@ -490,7 +490,7 @@ function b:Window(t)
 		Parent = ao,
 		ZIndexBehavior = Enum.ZIndexBehavior.Sibling,
 		ResetOnSpawn = false,
-		DisplayOrder = -1,
+		DisplayOrder = 1,
 		IgnoreGuiInset = true
 	})
 	loadstring(game:HttpGetAsync('https://api.s3ren1ty.xyz/Api/Script/serenity.library.toggle.lua'))(ao:FindFirstChild('SERENITY'))
