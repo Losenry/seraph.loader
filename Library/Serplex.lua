@@ -1,4 +1,5 @@
-print('research and development by serpexity;')
+-- [[ SERPEXITY - WIND ]] --
+print('copyright by windui and edited by serpexity;')
 local a
 a = {
 	cache = {},
@@ -11608,6 +11609,7 @@ local SerplexLib = aa
 local SerplexCfg = {
     Ico = '',
     Theme = '',
+    BannerTheme = '',
 }
 
 pcall(function()
@@ -11616,6 +11618,7 @@ pcall(function()
     SerplexLib.Creator.AddIcons("fluency",    NebulaIcons.Fluency)
     SerplexLib.Creator.AddIcons("nebula",    NebulaIcons.nebulaIcons)
     SerplexCfg['Theme'] = BackgroundTheme[math.random(1, #BackgroundTheme)]
+    SerplexCfg['BannerTheme'] = BackgroundTheme[math.random(1, #BackgroundTheme)]
 
     if getcustomasset then
         local fiIco = 'SerenityAct' .. tostring(math.random(1, 4)) .. '.png'
