@@ -1,4 +1,4 @@
--- [[ SERPEXITY - WIND ]] --
+-- [[ SR25: SERPEXITY - WIND  ]] --
 print('copyright by windui and edited by serpexity;')
 local a
 a = {
@@ -11622,7 +11622,7 @@ pcall(function()
 
     if getcustomasset then
         local fiIco = 'SerenityAct' .. tostring(math.random(1, 4)) .. '.png'
-        local urIco = string.format('https://raw.githubusercontent.com/Losenry/seraph.loader/refs/heads/main/Library/Icons/%s', naIco)
+        local urIco = string.format('https://raw.githubusercontent.com/Losenry/seraph.loader/refs/heads/main/Library/Icons/%s', fiIco)
         writefile(fiIco, game:HttpGet(urIco))
         repeat wait() until isfile(fiIco) == true
         SerplexCfg['ico'] = getcustomasset(fiIco)
