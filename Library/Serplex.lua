@@ -1,3 +1,4 @@
+print('research and development by serpexity;')
 local a
 a = {
 	cache = {},
@@ -11602,4 +11603,29 @@ or tostring(ay.KeySystem.Key) == tostring(aF)
 	end
 	return aE
 end
-return aa
+
+local SerplexLib = aa
+local SerplexCfg = {
+    Ico = '',
+    Theme = '',
+}
+
+pcall(function()
+    local BackgroundTheme = loadstring(game:HttpGet('https://raw.githubusercontent.com/Losenry/seraph.loader/refs/heads/main/Library/bgd.lua'))();
+    local NebulaIcons = loadstring(game:HttpGetAsync("https://raw.nebulasoftworks.xyz/nebula-icon-library-loader"))()
+    SerplexLib.Creator.AddIcons("fluency",    NebulaIcons.Fluency)
+    SerplexLib.Creator.AddIcons("nebula",    NebulaIcons.nebulaIcons)
+    SerplexCfg['Theme'] = BackgroundTheme[math.random(1, #BackgroundTheme)]
+
+    if getcustomasset then
+        local fiIco = 'SerenityAct' .. tostring(math.random(1, 4)) .. '.png'
+        local urIco = string.format('https://raw.githubusercontent.com/Losenry/seraph.loader/refs/heads/main/Library/Icons/%s', naIco)
+        writefile(fiIco, game:HttpGet(urIco))
+        repeat wait() until isfile(fiIco) == true
+        SerplexCfg['ico'] = getcustomasset(fiIco)
+    end
+end)
+
+_G.SerplexCfg = SerplexCfg
+_G.SerplexLib = SerplexLib
+return SerplexLib, SerplexCfg
