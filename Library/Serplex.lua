@@ -11625,7 +11625,7 @@ pcall(function()
         local urIco = string.format('https://raw.githubusercontent.com/Losenry/seraph.loader/refs/heads/main/Library/Icons/%s', fiIco)
         writefile(fiIco, game:HttpGet(urIco))
         repeat wait() until isfile(fiIco) == true
-        SerplexCfg['ico'] = getcustomasset(fiIco)
+        SerplexCfg['Ico'] = getcustomasset(fiIco)
     end
 end)
 
