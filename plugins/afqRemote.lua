@@ -3,7 +3,7 @@ local allRemoteCode = {
     "\r", -- redeem
     "\020", -- gear spin
     '\027', -- weapon spin
-    '\023', -- skill
+    '\026', -- skill
     "\f", -- hit attack
     '\024', -- craft
     ')', -- retry
