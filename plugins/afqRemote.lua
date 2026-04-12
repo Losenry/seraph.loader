@@ -6,6 +6,6 @@ local allRemoteCode = {
     '\026', -- skill
     "\f", -- hit attack
     '\024', -- craft
-    ')', -- retry
+    '*', -- retry
 }
 return allRemoteCode
